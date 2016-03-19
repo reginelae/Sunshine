@@ -14,6 +14,7 @@ import java.util.Date;
 /**
  * Created by reginelae on 3/18/2016.
  */
+
 public class Utility {
     public static String getPreferredLocation(Context context) {
     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -34,7 +35,6 @@ public class Utility {
                 temperature = (temperature * 1.8) + 32;
             }
 
-            // For presentation, assume the user doesn't care about tenths of a degree.
             return String.format(context.getString(R.string.format_temperature), temperature);
         }
 
