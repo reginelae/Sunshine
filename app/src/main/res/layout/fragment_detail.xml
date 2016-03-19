@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Header: Day, Date -->
         <TextView
             android:fontFamily="sans-serif-condensed"
             android:id="@+id/detail_day_textview"
@@ -27,7 +26,6 @@
             android:textColor="@color/grey_700"
             android:textSize="16sp" />
 
-        <!-- Main content: high, low, art, weather state -->
         <LinearLayout
             android:gravity="center_horizontal"
             android:layout_height="match_parent"
@@ -78,7 +76,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Humidity, wind, pressure -->
         <LinearLayout
             android:layout_height="match_parent"
             android:layout_marginRight="0dp"

@@ -2,14 +2,9 @@ package com.example.android.sunshine.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.example.android.sunshine.R;
 
@@ -22,9 +17,9 @@ public class DetailActivity extends ActionBarActivity {
 
         if (savedInstanceState == null) {
             Bundle arguments = new Bundle();
-            arguments.putParcelable(DetailActivityFragment.DETAIL_URI, getIntent().getData());
+            arguments.putParcelable(DetailFragment.DETAIL_URI, getIntent().getData());
 
-            DetailActivityFragment fragment = new DetailActivityFragment();
+            DetailFragment fragment = new DetailFragment();
             fragment.setArguments(arguments);
 
             getSupportFragmentManager().beginTransaction()
