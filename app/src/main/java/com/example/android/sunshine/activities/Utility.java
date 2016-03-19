@@ -44,14 +44,6 @@ public class Utility {
         }
 public static final String DATE_FORMAT = "yyyyMMdd";
 
-        /**
-         * Helper method to convert the database representation of the date into something to display
-         * to users.  As classy and polished a user experience as "20140102" is, we can do better.
-         *
-         * @param context Context to use for resource localization
-         * @param dateInMillis The date in milliseconds
-         * @return a user-friendly representation of the date.
-         */
         public static String getFriendlyDayString(Context context, long dateInMillis) {
 
             Time time = new Time();
@@ -75,14 +67,6 @@ public static final String DATE_FORMAT = "yyyyMMdd";
             }
         }
 
-        /**
-         * Given a day, returns just the name to use for that day.
-         * E.g "today", "tomorrow", "wednesday".
-         *
-         * @param context Context to use for resource localization
-         * @param dateInMillis The date in milliseconds
-         * @return
-         */
         public static String getDayName(Context context, long dateInMillis) {
 
             Time t = new Time();
@@ -138,12 +122,7 @@ public static final String DATE_FORMAT = "yyyyMMdd";
             return String.format(context.getString(windFormat), windSpeed, direction);
         }
 
-        /**
-         * Helper method to provide the icon resource id according to the weather condition id returned
-         * by the OpenWeatherMap call.
-         * @param weatherId from OpenWeatherMap API response
-         * @return resource id for the corresponding icon. -1 if no relation is found.
-         */
+
         public static int getIconResourceForWeatherCondition(int weatherId) {
             if (weatherId >= 200 && weatherId <= 232) {
                 return R.drawable.ic_storm;
